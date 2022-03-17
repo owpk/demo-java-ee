@@ -12,8 +12,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
- *
- * @author airhacks.com
  */
 @Path("health")
 @Produces(MediaType.APPLICATION_JSON)
@@ -26,6 +24,7 @@ public class HealthResource {
     @Path("/start-time")
     @Produces(MediaType.TEXT_PLAIN)
     public String bootTime() {
+        System.out.println("START-TIME: OK");
         return this.watch.getDateTime().toString();
     }
 
